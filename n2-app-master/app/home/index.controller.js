@@ -23,6 +23,8 @@
             UserService.GetUserId().then(function (userId) {
                 UserService.GetCurrent(userId).then(function (user) {
                         vm.user = user;
+						
+						sessionStorage.setItem("user", JSON.stringify(user));
                     });
             });
         }
